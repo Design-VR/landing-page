@@ -1,0 +1,264 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Cabin", Arial, sans-serif;
+}
+
+header {
+    padding: 0px 20px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.navbar .signup-btn {
+    background-color: #ff7a59;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.hero-section {
+    background-image: url('assets/background/bg1.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 25px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hero-section p {
+    font-size: 24px;
+    max-width: 846px;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.hero-buttons .cta-button {
+    background-color: #ff7a59;
+    color: #fff;
+    border: 2px solid #ff7a59;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hero-buttons .cta-button.secondary {
+    background-color: transparent;
+}
+
+.intro-section {
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-section p{
+    max-width: 1024px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #697694;
+}
+
+.intro-section p .blue-24{
+    font-size: 24px;
+    font-weight: 600;
+    color: #254794;
+}
+
+
+.feature-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 80px;
+    gap: 20px;
+    background: 
+    url('assets/background/grid-bg2.svg') top left no-repeat,
+    url('assets/background/grid-bg3.svg') bottom right no-repeat,
+    linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 100%),
+    linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 100%),
+    linear-gradient(to right, transparent 0%,rgba(220,232,255,0.5) 25%, rgba(220,232,255,1) 50%, rgba(220,232,255,1) 100%),
+    linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 80%, rgba(255,255,255,0) 100%);
+    /* Adjust the size and position of the images if needed */
+    background-size: auto, auto, contain, cover, cover; /* Adjust sizes as needed */
+}
+
+.feature-card {
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    padding: 80px 0;
+}
+
+.content-1{
+    padding-top: 0;
+}
+
+.feature-card.right {
+    flex-direction: row-reverse;
+}
+
+.vertical-scroll{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Enable vertical scroll */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer and Edge */
+}
+
+.vertical-scroll.card-count{
+    max-height: 20px;
+}
+
+.vertical-scroll.card-heading{
+    margin-top: 8px;
+    max-height: 80px;
+}
+
+.vertical-scroll.card-point-1{
+    margin-top: 32px;
+    max-height: 90px;
+}
+
+.vertical-scroll.card-point-2{
+    max-height: 90px;
+}
+
+.vertical-scroll .scroll-item{
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+}
+
+.feature-card .feature-content h2{
+    flex: 0 0 100%;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.feature-card .feature-content h1{
+    flex: 0 0 100%;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.feature-card .feature-content ul{
+    flex: 0 0 100%;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0;
+    max-width: 580px;
+    color: #697694;
+    margin-left: -20px;
+}
+
+.horizontal-scroll{
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scroll */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer and Edge */
+}
+
+.feature-card img {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.feature-card .feature-images{
+    max-width: 628px;
+    border-radius: 46px;
+    margin-top: 20px;
+}
+
+.features-section {
+    background-image: url('assets/background/grid-bg4.svg');
+    background-size: cover;
+    background-color: rgba(0,0,0,0.7);
+    height: 1064px;
+    margin-top: 80px;
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.features-title{
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 50px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    flex: 1 1 calc(50% - 10px);
+    text-align: center;
+    background-color: #282828;
+    color: #fff;
+    border: 0.75px solid #dee2e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 22.5px;
+    padding: 20px;
+    max-width: 375px;
+    height: 375px;
+}
