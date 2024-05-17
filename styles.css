@@ -5,6 +5,7 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Cabin", Arial, sans-serif;
+  min-width: 465px;
 }
 
 header {
@@ -84,6 +85,18 @@ header {
   font-weight: bold;
 }
 
+.hero-buttons a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+a.cta-button {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
 .hero-buttons .cta-button.secondary {
   background-color: transparent;
 }
@@ -148,9 +161,46 @@ header {
   background-size: auto, auto, contain, cover, cover; /* Adjust sizes as needed */
 }
 
+.steps-section .feature-card-xl .feature-card {
+  display: flex;
+}
+.steps-section .feature-card-l .feature-card {
+  display: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  .steps-section .feature-card-xl .feature-card {
+    display: none;
+  }
+  .steps-section .feature-card-l {
+    display: flex;
+    flex-direction: column;
+  }
+  .steps-section .feature-card-l .feature-card {
+    display: flex;
+    flex: auto;
+  }
+
+  .steps-section .feature-card-l .feature-card.right {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .steps-section .feature-card-l .feature-card img {
+    border-radius: 5px;
+    margin-left: 20px;
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .steps-section .feature-card-l .feature-card img {
+    display: none;
+  }
+}
+
 .steps-section .feature-card {
   background-size: contain;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   flex: 0 0 100%;
@@ -186,13 +236,13 @@ header {
   max-height: 80px;
 }
 
-.steps-section .vertical-scroll.card-point-1 {
+.steps-section .vertical-scroll.card-points {
   margin-top: 32px;
-  max-height: 90px;
+  max-height: 230px;
 }
 
-.steps-section .vertical-scroll.card-point-2 {
-  max-height: 90px;
+.steps-section .vertical-scroll.card-points .point-1 {
+  margin-bottom: 70px;
 }
 
 .steps-section .vertical-scroll .scroll-item {
@@ -232,6 +282,10 @@ header {
   margin-left: -20px;
 }
 
+.steps-section .feature-card .feature-content ul li {
+  margin-bottom: 20px;
+}
+
 .steps-section .horizontal-scroll {
   display: flex;
   overflow-x: auto; /* Enable horizontal scroll */
@@ -258,7 +312,7 @@ header {
   background-image: url("assets/background/grid-bg4.svg");
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.7);
-  height: 1064px;
+  min-height: 1064px;
   margin-top: 80px;
   padding: 40px 10px;
   text-align: center;
@@ -275,7 +329,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 100px;
+  gap: 150px;
   margin-top: 20px;
 }
 
@@ -299,6 +353,29 @@ header {
   width: 100px;
   height: 100px;
   margin-bottom: 20px;
+}
+
+.modular-quote-section {
+  margin: 60px;
+  background: url("assets/background/get_modular_quote.jpeg");
+  width: auto;
+  height: 340px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modular-quote-section a {
+  background: radial-gradient(
+      163.9% 163.9% at -52.93% 0%,
+      #dd7844 0%,
+      #2f52a4 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  color: white;
+  padding: 15px 20px 15px 20px;
+  border-radius: 10px;
 }
 
 .footer {
