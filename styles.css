@@ -445,12 +445,6 @@ a.cta-button {
   display: none;
 }
 
-@media only screen and (min-width: 640px) {
-  .carousel {
-    display: block;
-  }
-}
-
 .carousel h2 {
   margin-bottom: 20px;
 }
@@ -690,6 +684,11 @@ a.cta-button {
   margin-top: 10px;
   text-align: center;
   width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+  .carousel {
+    display: block;
+  }
 }
 
 @media (max-width: 600px) {
