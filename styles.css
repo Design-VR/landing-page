@@ -46,7 +46,6 @@ header {
 }
 
 .hero-section {
-  background-image: url("assets/background/bg1.jpeg");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -57,6 +56,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero-section {
+  background-image: url("assets/background/bg1.jpeg");
+  @supports (background-image: url("assets/background/bg.webp")) {
+    background-image: url("assets/background/bg.webp");
+  }
 }
 
 .hero-section h1 {
@@ -586,7 +592,7 @@ a.cta-button {
 .footer .get-started-btn {
   background-color: white;
   color: #202020;
-  height: 40px;
+  height: 20px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -691,9 +697,9 @@ a.cta-button {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 740px) {
   .footer .get-started-btn {
-    height: 60px;
+    height: 40px;
   }
   .footer .footer-right {
     display: flex;
